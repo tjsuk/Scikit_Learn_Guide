@@ -91,7 +91,17 @@ with `joblib`, and scaling up to full MNIST.
    pip install -r requirements.txt
    ```
 
-5. **Register the environment as a Jupyter kernel** (so the notebook can find your installed
+5. **Set up `nbstripout`**, which this repository uses to strip notebook cell outputs before
+   they're committed (so diffs stay readable and outputs never get checked into git):
+
+   ```bash
+   nbstripout --install
+   ```
+
+   This registers a git filter scoped to this repository only — it doesn't affect any other
+   project on your machine.
+
+6. **Register the environment as a Jupyter kernel** (so the notebook can find your installed
    packages):
 
    ```bash
