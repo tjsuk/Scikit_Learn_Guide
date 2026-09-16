@@ -9,8 +9,24 @@ worked, numeric demonstration rather than just asserting it.
 It starts by writing a classifier by hand to feel the problem scikit-learn solves, then builds
 up through the Estimator API, preprocessing, evaluation, pipelines, and hyperparameter search,
 finishing with a capstone that trains a real neural network (`MLPClassifier`) on the same
-handwritten digit images used in the companion **NumPy_Fundamentals** notebook — so the two
+handwritten digit images used in the companion
+**[NumPy_Fundamentals](https://github.com/tjsuk/ExplainingNumPy)** notebook — so the two
 notebooks can be read together as "build it by hand, then see the toolkit that does it for you."
+
+**Part of a series** on machine learning fundamentals, each solving a related problem at a
+different level of the stack:
+
+1. **[NumPy_Fundamentals](https://github.com/tjsuk/ExplainingNumPy)** — build a neural network
+   from scratch using nothing but NumPy
+2. **Scikit_Learn_Guide** (this notebook) — the same handwritten-digit dataset, solved with
+   scikit-learn's toolkit
+3. **[HandwrittenTensorflow](https://github.com/tjsuk/HandwrittenTensorflow)** — a full
+   digit-recognition project built with TensorFlow/Keras
+4. **[HandwrittenPyTorch](https://github.com/tjsuk/HandwrittenPyTorch)** — the same
+   digit-recognition project built with PyTorch
+
+They're independent and don't require reading in order, but each links back to the others where
+the connection is most relevant.
 
 ## What's inside
 
@@ -32,8 +48,10 @@ notebooks can be read together as "build it by hand, then see the toolkit that d
 11. **Capstone**: training `MLPClassifier` (scikit-learn's neural network) on 1,797 real
     handwritten digit images, benchmarked against logistic regression, a random forest, and an
     SVM — with a direct comparison to the from-scratch NumPy network's accuracy
-12. **How scikit-learn fits alongside deep learning frameworks** — TensorFlow/Keras and
-    PyTorch, with an illustrative (non-executed) Keras snippet
+12. **How scikit-learn fits alongside deep learning frameworks** —
+    [TensorFlow/Keras](https://github.com/tjsuk/HandwrittenTensorflow) and
+    [PyTorch](https://github.com/tjsuk/HandwrittenPyTorch), with an illustrative
+    (non-executed) Keras snippet
 
 It finishes with a **Summary** recapping the whole notebook and a glossary of key terms
 (Estimator, Transformer, Pipeline, cross-validation, data leakage, hyperparameter, MLP), plus
@@ -105,8 +123,9 @@ notebook works fully offline.
 ## Notes
 
 - The capstone (Step 11) deliberately reuses the same 8x8 handwritten digits dataset as the
-  `NumPy_Fundamentals` notebook's capstone, so the two can be compared directly: a from-scratch
-  NumPy network there, and several one-line scikit-learn models here.
+  [`NumPy_Fundamentals`](https://github.com/tjsuk/ExplainingNumPy) notebook's capstone, so the two
+  can be compared directly: a from-scratch NumPy network there, and several one-line scikit-learn
+  models here.
 - Step 9's data-leakage demo uses 500 purely random features and purely random labels on
   purpose — the "correct" accuracy really should sit around 50%, and the notebook shows exactly
   how easy it is to accidentally report something far higher.
